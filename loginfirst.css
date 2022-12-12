@@ -1,0 +1,219 @@
+body, html {
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: 200;
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+body{
+	display: block;
+	/*margin: 8px; box-sizing: border-box*/
+}
+.page{
+	min-height: 100%;;
+	display: flex;
+	flex-direction: row;
+	box-sizing: border-box;
+	/*@media -> @page {display: flex;
+	flex-direction: row;}-> 전체 화면에 대하여 flex를 적용하는 듯
+	왜 굳이 @media를 이용해서 전체 영역을 지정해주는 걸까? 어떻게 전체 영역을 지정할까?*/
+}
+.div{
+	display: block;
+}
+.left{
+	flex-basis: 50%;
+	min-height: 100%;
+    padding: 60px 30px;
+	background-image: url(media/TED_left.png);
+    background-size: cover;
+    background-position: center center;
+}
+.right{
+	flex-basis: 50%;
+	padding: 60px 30px;
+	align-self: center;
+	width: 100%; margin: 0px auto;
+}
+p{
+	display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.Account{
+	color: rgb(51, 51, 51);
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 1rem;
+	font-weight: 200;
+	line-height: 1.4;
+	text-align: center;
+	margin: 1.4rem 0px;
+}
+.Google{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    color: rgb(68, 68, 68);
+    cursor: pointer;
+    font-weight: 700;
+    line-height: 1.3;
+    text-align: center;
+    padding-top: calc(11px - 0.1ex);
+    padding-bottom: calc(11px + 0.1ex);
+    min-width: 30rem;
+    width: auto;
+    position: relative;
+    padding-left: calc(2.6rem + 10px);
+    padding-right: 10px;
+    min-width: 17rem;
+    background: linear-gradient(to right, rgb(66, 133, 244) 2.6rem, transparent 2.6rem) rgb(238, 238, 238);
+    border-width: 0px;
+    border-style: initial;
+    border-color: initial;
+    border-image: initial;
+    border-radius: 4px;
+    text-decoration: none;
+}
+.B{
+	fill: white;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 2.6rem;
+    height: 100%;
+}
+.Facebook{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    color: rgb(68, 68, 68);
+    cursor: pointer;
+    font-weight: 700;
+    line-height: 1.3;
+    text-align: center;
+    padding-top: calc(11px - 0.1ex);
+    padding-bottom: calc(11px + 0.1ex);
+    min-width: 30rem;
+    width: auto;
+    position: relative;
+    padding-left: calc(2.6rem + 10px);
+    padding-right: 10px;
+    min-width: 17rem;
+    background: linear-gradient(to right, rgb(59, 88, 152) 2.6rem, transparent 2.6rem) rgb(238, 238, 238);
+    border-width: 0px;
+    border-style: initial;
+    border-color: initial;
+    border-image: initial;
+    border-radius: 4px;
+    text-decoration: none;
+}
+.or{
+	margin: 3.2rem 0px;
+	text-align: center;
+	/*margin: 1.8rem -20px;*/
+}
+.line{
+	width: 100%;
+    height: 1px;
+    position: relative;
+    top: 1rem;
+    background: rgb(221, 221, 221);
+}
+.or2{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.4;
+    background-color: white;
+    color: rgb(187, 187, 187);
+    font-size: 1.4rem;
+    font-weight: 200;
+    position: relative;
+    top: -0.2rem;
+    padding: 0px 1rem;
+}
+.Enter{
+	font-size: 1.5rem;
+    text-align: center;
+    font-weight: 200;
+    line-height: 1.4;
+    max-width: 30rem;
+    margin: 0.4rem auto -0.8rem;
+}
+.box{
+	max-width: 20rem;
+	display: block;
+	margin: 1.4rem auto;
+}
+.address{
+	margin: 2rem 0px;
+}
+.smalltxt{
+	font-size: 0.875rem;
+    font-weight: 400;
+    margin-bottom: 0.6ex;
+}
+.email{
+	box-shadow: none;
+    outline: none;
+    color: rgb(51, 51, 51);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.4;
+    background-color: white;
+    display: block;
+    font-weight: 400;
+    width: 100%;
+    -webkit-appearance: none;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(221, 221, 221);
+    border-image: initial;
+    border-radius: 4px;
+    padding: 18px;
+    box-sizing: border-box;
+}
+.email:focus{
+	border-color: rgb(0, 157, 228);
+	outline-offset: 5px;
+}
+label{
+	cursor: default;
+}
+
+.Continue{
+	margin-top: 2.4rem;
+	text-align: center;
+	box-sizing: border-box;
+}
+.box2{
+	position: relative;
+	box-sizing: border-box;
+	opacity: 1;
+}
+.Cbutton{
+	width: auto;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.3;
+    text-align: center;
+    color: rgb(153, 153, 153);
+    cursor: default;
+    border-width: 0px;
+    border-style: initial;
+    border-color: initial;
+    border-image: initial;
+    border-radius: 4px;
+    text-decoration: none;
+    padding: calc(11px - 0.1ex) 28px calc(11px + 0.1ex);
+    background: rgb(246, 246, 246);
+}
+.Google:hover{
+	filter: brightness(75%);
+}
+.Facebook:hover{
+	filter: brightness(75%);
+}

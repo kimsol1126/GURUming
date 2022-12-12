@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<title>teed</title>
+<link rel="stylesheet" type="text/css" href="http://kenwheeler.github.io/slick/slick/slick.css" />
+<link rel="stylesheet" type="text/css" href="http://kenwheeler.github.io/slick/slick/slick-theme.css" />
+<link rel="stylesheet" type="text/css" href="1.css">
+<script src="http://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="http://kenwheeler.github.io/slick/slick/slick.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+	$('.responsive').slick({
+ 		dots: false,
+  		infinite: false,
+  		speed: 300,
+  		slidesToShow: 3,
+  		slidesToScroll: 3,
+  		responsive: [
+    		{
+      			breakpoint: 1024,
+      			settings: {
+        		slidesToShow: 3,
+        		slidesToScroll: 3,
+        		infinite: true,
+        		dots: true
+      			}
+    		},
+    		{
+      			breakpoint: 600,
+      			settings: {
+        		slidesToShow: 2,
+        		slidesToScroll: 2
+      			}
+    		},
+    		{
+      			breakpoint: 480,
+      			settings: {
+        		slidesToShow: 1,
+        		slidesToScroll: 1
+      			}
+    		}
+ 
+  		]
+	});
+
+});
+
+$(document).ready(function() { 
+	$("input:checkbox").on('click', function() { 
+		if ($(this).prop('checked') ) { 
+			$(this).parent().addClass("selected");
+		} 
+		else {$(this).parent().removeClass("selected"); } 
+	}); 
+});
+
+</script>
+</head>
+<!-- <style type="text/css">
+	div{display: block;}
+	body{color:#333;font-family: Inter,Helvetica Neue,Helvetica,Arial,sans-serif; font-weight: 400; margin-top: 0 }
+	html{letter-spacing: -.025em;}
+	/*.Main_nav_logo{float:left;}
+	.Main_nav_link{text-decoration: none;}*/
+	*{box-sizing: border-box;}
+	button{text-rendering: auto; letter-spacing: normal; word-spacing: normal; text-indent: 0px; text-shadow: none; }
+	hr{background-color:#F2F2F2 }
+
+	#menu{text-transform: uppercase!important;}
+	.menubar{float: right;cursor: pointer; display: block; font-size: 14px; line-height: 54px; height: 54px; list-style-type: none; margin: 0}
+	.menubar li ul{float: left; font-weight: 700; padding: 0 16px}
+	.menubar li ul{display: block;}
+	.menubar li ul:hover{background: #F2F2F2;}
+	#si{border: 0px solid lightgray; border-left-width: .5px; border-right-width: .5px}
+	#si a:link, a:visited, a:active{color: inherit; text-decoration: none;}
+	#menu img{margin: 12px 0px 12px 0px;}
+	.main_dp{height: 587px; left: 0px; position: absolute; right: 0px; z-index: 2; background: radial-gradient(circle, rgb(0, 0, 0), rgba(0, 0, 0, 0.4)) 0% 0% / cover;}
+	.imgleft{height: 587px; left:0px; position: absolute; width:50%; z-index: 1; background: url("media/tr-bg-left-800.jpg") 25% top / cover no-repeat; background-image: url(media/tr-bg-left-800.jpg)25% top / cover no-repeat; background-size: cover;
+    }
+    .imgright{height: 587px;display: block; right:0px; position: absolute; width:50%; z-index: 1; background:url("media/tr-bg-right-800.jpg") center top/cover no-repeat; background-size: cover;}
+    .main_hole{text-align: center; will-change: background-position; margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); animation: 10s ease 0s infinite normal none running undefined; background: rgb(246, 246, 246);}
+    .topic{background-color: transparent; box-shadow: rgba(0,0,0,0.25)0px 0px 0px; color: white; border-width: 1px; border-style: solid; border-color: white; border-image: initial; transition: all 0.15s linear 0s; cursor: pointer; border-radius: 4.29982rem; display: block; padding-left: 1.2rem; padding-right: 1.2rem; padding-bottom: .69444rem; padding-top: .5787rem; margin-right: 1rem; margin-bottom: 1rem; font-weight: 500; font-size: 1rem!important}
+    .selected{background-color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 0px; color: rgb(0, 0, 0);  border-width: 1px;border-style: solid; border-color: rgb(255, 255, 255); border-image: initial; transition: all 0.15s linear 0s;}
+
+    .quiz{position: relative; z-index: 2;}
+    .quiz button:disabled{cursor: not-allowed;transition: background .2s linear}
+    .quiz button{border: none; display: inline-block; margin: 20px 10px 0 0; padding: 15px 60px; color: white; border-radius: 2px; font-weight: 700}
+    .vidstart{padding-top: .23257rem!important; margin-left: auto; margin-right: auto; max-width: 100rem}
+    #tedrec{width:auto; height: 219.86px; padding-top: 82.556px; padding-left: 27.648px; padding-right: 27.648px; margin-bottom: -27.648px; position: relative; z-index: 2; }
+    #tedrec>h2{margin-bottom: 1rem; margin-top: 1.2rem; font-size: 2.48832rem; font-weight: 200; line-height: 1.2; color:white; }
+    #tedrec>h3{letter-spacing: -.025em; font-weight: 400; font-size: 1.44rem; color: white; line-height: 1.3; margin:0;}
+    #wiy{padding-left: padding-left: 2.48832rem; padding-right: 2.48832rem; margin-left: auto; margin-right: auto; position: relative; z-index: 2; max-width: 100rem; line-height: 1.3; padding-top: 3.450rem; max-width: 100rem}
+    #wiy2{margin-bottom: 40px; font-size: 1.125rem; line-height: 1.38889;}
+    #wiy2 h2{font-size: 1.2rem; margin-top: 0px; font-weight: 400; line-height: 1.2; margin: 0; color: white}
+    #wiycheck{flex-wrap: wrap; display: flex; line-height: 1.3; font-size: 87.5%; position: relative; justify-content: center}
+    #cb{opacity: 1; transform: scale(1);}
+    #cb>div{display: inline-block!important;}
+    #wiycheck label:hover{background-color: rgba(255,255,255,0.7); color: rgb(0,0,0); box-shadow: rgba(0,0,0,0.25) 0px 2px 20px;}
+    #vid1_react-container{padding-left: 0; }
+    #newest{letter-spacing: -.05em; margin-bottom: .48225rem; margin-top: .69444rem; text-align: left; font-weight: 700; font-size: 1.728rem; color: black; }
+    #pd{color: rgb(204,204,204); padding-bottom: 1.2rem; margin-top: 1.2rem; position: relative; z-index: 2;}
+    #pd a:link, a:visited, a:active{color: inherit;}
+    #rp{height: 300px; }
+    #rp img{height: 280px; width: auto; justify-content: center}
+    #cb input{display: none}
+
+</style> -->
+<body>
+	<header>
+		<div><a href="1.html"><img src="media/ted_mainrogo.png"></a>
+			<ul class=menubar>
+				<li>
+					<ul><div id=menu>WATCH</div></ul>
+
+					<ul><div id=menu>DISCOVER</div></ul>
+					<ul><div id=menu>ATTEND</div></ul>
+					<ul><div id=menu>PARTICIPATE</div></ul>
+					<ul><div id=menu>ABOUT</div></ul>
+					<ul id="si"><div id=menu><a href="loginfirst.html">SIGN IN</a></div></ul>
+					<ul><div id=menu><img src="media/search.png"></div>
+				</li>
+			</ul>
+		</div>
+		<div class="main_hole">	
+			<div class="recommends">
+				<div class="main_dp"></div>
+				<div class="imgleft"></div>
+				<div class="imgright"></div>
+			</div>
+			<div id="tedrec">
+				<h2><strong>TED&nbsp;Recommends</strong></h2>
+				<h3>Talks recommended just for you, delivered to your inbox</h3>
+			</div>
+			<div class="quiz">
+				<div id="wiy">
+					<div id="wiy2">
+						<div>
+							<h2><span>What interests you?</span></h2>
+						</div>
+					</div>
+					<div id="wiycheck">
+					<div id="cb">
+						<div>
+							<label for="Technology" class="topic">
+								<input type="checkbox" id="Technology" value="Technology" >Technology
+							</label>
+						</div>
+					</div>
+					<div id="cb">
+						<div>
+							<label for="Science" class="topic">
+								<input type="checkbox" id="Science" value="Science">Science
+							</label>
+						</div>
+					</div>
+					<div id="cb">
+						<div>
+							<label for="Design" class="topic">
+								<input type="checkbox" id="Design" value="Design">Design
+							</label>
+						</div>
+					</div>
+					<div id="cb">
+						<div>
+							<label for="Business" class="topic">
+								<input type="checkbox" id="Business" value="Business">Business
+							</label>
+						</div>
+					</div>
+					<div id="cb">
+						<div>
+							<label for="Collaboration" class="topic">
+								<input type="checkbox" id="Collaboration" value="Collaboration">Collaboration
+							</label>
+						</div>
+					</div>
+					<div id="cb">
+						<div>
+							<label for="innovation" class="topic">
+								<input type="checkbox" id="innovation" value="innovation">innovation
+							</label>
+						</div>
+					</div>
+					<div id="cb">
+						<div>
+							<label for="Social change" class="topic">
+								<input type="checkbox" id="Social change" value="Social change">Social change
+							</label>
+						</div>
+					</div>
+					<div id="cb">
+						<div>
+							<label for="Health" class="topic">
+								<input type="checkbox" id="Health" value="Health">Health
+							</label>
+						</div>
+					</div>
+					<div id="cb">
+						<div>
+							<label for="Nature" class="topic">
+								<input type="checkbox" id="Nature" value="Nature">Nature
+							</label>
+						</div>
+					</div>
+					<div id="cb">
+						<div>
+							<label for="The environment" class="topic">
+								<input type="checkbox" id="The environment" value="The environment">The environment
+							</label>
+						</div>
+					</div>
+					<div id="cb">
+						<div>
+							<label for="The future" class="topic">
+								<input type="checkbox" id="The future" value="The future">The future
+							</label>
+						</div>
+					</div>
+					<div id="cb">
+						<div>
+							<label for="Communication" class="topic">
+								<input type="checkbox" id="Communication" value="Communication">Communication
+							</label>
+						</div>
+					</div>
+					<div id="cb">
+						<div>
+							<label for="Activism" class="topic">
+								<input type="checkbox" id="Activism" value="Activism">Activism
+							</label>
+						</div>
+					</div>
+					<div id="cb">
+						<div>
+							<label for="Child development" class="topic">
+								<input type="checkbox" id="Child development" value="Child development">Child development
+							</label>
+						</div>
+					</div>
+					<div id="cb">
+						<div>
+							<label for="Personal growth" class="topic">
+								<input type="checkbox" id="Personal growth" value="Personal growth">Personal growth
+							</label>
+						</div>
+					</div>
+					<div id="cb">
+						<div>
+							<label for="Humanity" class="topic">
+								<input type="checkbox" id="Humanity" value="Humanity">Humanity
+							</label>
+						</div>
+					</div>
+					<div id="cb">
+						<div>
+							<label for="Society" class="topic">
+								<input type="checkbox" id="Society" value="Society">Society
+							</label>
+						</div>
+					</div>
+					<div id="cb">
+						<div>
+							<label for="Identity" class="topic">
+								<input type="checkbox" id="Identity" value="Identity">Identity
+							</label>
+						</div>
+					</div>
+					<div id="cb">
+						<div>
+							<label for="Community" class="topic">
+								<input type="checkbox" id="Community" value="Community" >Community
+							</label>
+						</div>
+					</div>
+					</div> <!-- 체크박스 누르면 색 변하는거 구현 함 -->
+				</div>
+				<div> <!-- NEXT 버튼 -->
+					<button class="next" style="background: rgb(252,82,72)";><a href="loginfirst.html">Next</a></button>
+				</div>
+			</div>
+			<div id="pd">
+				<div><span>1</span><span>/2</span></div>
+				<div id="pd"><span>Already have a TED account? &nbsp;<a href="loginfirst.html">Sign in</a><span>&nbsp;to see your recommendations</span></span></div>
+			</div>
+			<div id="여기부터 영상란 시작"></div>
+			<div class="vidstart">
+				<div id="vid1_react-container">
+					<div class="vidstart">
+						<div>
+							<h2 id="newest">Newest Talks</h2>
+							<div class="responsive" id="rp">
+								<div><img src="media/scroll1.jpg"></div>
+								<div><img src="media/scroll2.jpg"></div>
+								<div><img src="media/scroll3.jpg"></div>
+								<div><img src="media/scroll4.jpg"></div>
+								<div><img src="media/scroll5.jpg"></div>
+								<div><img src="media/scroll6.jpg"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div><img src="media/11.png"></div>
+	</header>
+	<hr>
+	<footer>
+		<div><img src="media/footer.png"></div>
+	</footer>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+body, html {
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: 200;
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+body{
+	display: block;
+	/*margin: 8px; box-sizing: border-box*/
+}
+.page{
+	min-height: 100%;;
+	display: flex;
+	flex-direction: row;
+	box-sizing: border-box;
+	/*@media -> @page {display: flex;
+	flex-direction: row;}-> 전체 화면에 대하여 flex를 적용하는 듯
+	왜 굳이 @media를 이용해서 전체 영역을 지정해주는 걸까? 어떻게 전체 영역을 지정할까?*/
+}
+.div{
+	display: block;
+}
+.left{
+	flex-basis: 50%;
+	min-height: 100%;
+    padding: 60px 30px;
+	background-image: url(media/welcome.png);
+    background-size: cover;
+    background-position: center center;
+}
+.right{
+	flex-basis: 50%;
+	padding: 60px 30px;
+	align-self: center;
+	width: 100%; margin: 0px auto;
+}
+.txt{
+	font-size: 1.5rem;
+	text-align: center;
+	font-weight: 200;
+	line-height: 1.4;
+	max-width: 30rem;
+	margin: 0.4rem auto -0.8rem;
+	color: rgb(51,51,51);
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.Continue{
+	margin-top: 2.4rem;
+	text-align: center;
+	box-sizing: border-box;
+}
+.box2{
+	position: relative;
+	box-sizing: border-box;
+	opacity: 1;
+}
+.Cbutton{
+	width: auto;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.3;
+    text-align: center;
+    color: rgb(68,68,68);
+    border-width: 0px;
+    border-style: initial;
+    border-color: initial;
+    border-image: initial;
+    border-radius: 4px;
+    text-decoration: none;
+    padding: calc(11px - 0.1ex) 28px calc(11px + 0.1ex);
+    background: rgb(238,238,238);
+}
